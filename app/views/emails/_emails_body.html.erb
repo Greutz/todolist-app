@@ -1,0 +1,18 @@
+<div id="body_<%= email.id %>" class="mt-2">
+  <h2 class="text-center">
+    <%= email.object %>
+  </h2>
+
+  <hr><br>
+
+  <p>
+    <%= email.body %>
+  </p>
+
+  <br>
+
+  <div class="mb-2">
+        <button id="read_btn" class="btn btn-warning" type="button"><%= link_to "Marquer comme non-lu", email_path(email.id), :class => "text-dark", method: :put, remote: true %></button>
+        <button class="btn btn-danger" type="button"><%= link_to "Supprimer", email_path(email.id), method: :delete, remote: true, :class => "text-dark", data: { confirm: "Are you sure?" }%></button>
+  </div>
+</div>

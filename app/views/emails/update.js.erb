@@ -1,0 +1,12 @@
+<% if @email.read == false %>
+    document.getElementById("read_btn").classList.remove("btn-warning");
+    document.getElementById("read_btn").classList.add("btn-success");
+    document.getElementById("read_btn").childNodes[0].textContent = "Marquer comme lu";
+<% else %>
+  document.getElementById("read_btn").classList.remove("btn-success");
+  document.getElementById("read_btn").classList.add("btn-warning");
+  document.getElementById("read_btn").childNodes[0].textContent = "Marquer comme non-lu";
+<% end %>
+
+
+
